@@ -31,7 +31,7 @@ object SparkStatCleanJob {
     accessDF.coalesce(1).write.format("parquet").mode(SaveMode.Overwrite)
       .partitionBy("day")
         .save("/Users/Srunkyo/data/clean")
-    
+
     spark.stop()
   }
 }
